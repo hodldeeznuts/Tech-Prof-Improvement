@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ModMetaData>
+  <name>Tech Prof Improvement</name>
+  <author>hodlhodl</author>
+  <url />
+  <supportedVersions>
+    <li>1.0</li>
+  </supportedVersions>
+  <description>Balances Techprof Subpersona Core to cause a Research Frenzy inspiration to the pawn that consumes it, instead of instantly rewarding the current research project.</description>
+</ModMetaData>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <InspirationDef>
+    <defName>Frenzy_Research</defName>
+    <label>research frenzy</label>
+    <baseDurationDays>9</baseDurationDays>
+    <beginLetter>[PAWN_nameIndef] has experienced an inspiration!\n\n[PAWN_pronoun] pressed the small button of the core. Neural mechanites have taken a hold of [PAWN_nameIndef]'s brain.\n\n[PAWN_pronoun] will research faster until the mechanites expire.</beginLetter>
+    <beginLetterDef>PositiveEvent</beginLetterDef>
+    <endMessage>{0} is no longer inspired (research frenzy).</endMessage>
+    <baseInspectLine>Inspired: Research frenzy</baseInspectLine>
+    <workerClass>TechProf.InspirationWorker_Research</workerClass>
+    <requiredSkills>
+      <Intellectual>21</Intellectual>
+    </requiredSkills>
+    <associatedSkills>
+      <li>Intellectual</li>
+    </associatedSkills>
+  </InspirationDef>
+</Defs>

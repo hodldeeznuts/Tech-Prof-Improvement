@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>/Defs/ThingDef[defName="TechprofSubpersonaCore"]</xpath>
+      </li>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="TechprofSubpersonaCore"]/comps/li[compClass='CompUseEffect_FinishRandomResearchProject']</xpath>
+        <match Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="TechprofSubpersonaCore"]/comps/li[compClass='CompUseEffect_FinishRandomResearchProject']</xpath>
+          <value>
+            <li Class="CompProperties_UseEffect">
+              <compClass>TechProf.CompUseEffect_ResearchInspiration</compClass>
+            </li>
+          </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="TechprofSubpersonaCore"]/comps</xpath>
+          <value>
+            <li Class="CompProperties_UseEffect">
+              <compClass>TechProf.CompUseEffect_ResearchInspiration</compClass>
+            </li>
+          </value>
+        </nomatch>
+      </li>
+    </operations>
+  </Operation>
+
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>/Defs/ThingDef[defName="TechprofSubpersonaCore"]</xpath>
+      </li>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="TechprofSubpersonaCore"]/statBases</xpath>
+        <match Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="TechprofSubpersonaCore"]/statBases</xpath>
+          <value>
+            <statBases>
+              <MarketValue>600</MarketValue>
+              <MaxHitPoints>100</MaxHitPoints>
+              <Mass>2.0</Mass>
+              <Flammability>0.2</Flammability>
+            </statBases>
+          </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="TechprofSubpersonaCore"]</xpath>
+          <value>
+            <statBases>
+              <MarketValue>1000</MarketValue>
+              <MaxHitPoints>100</MaxHitPoints>
+              <Mass>2.0</Mass>
+              <Flammability>0.2</Flammability>
+            </statBases>
+          </value>
+        </nomatch>
+      </li>
+    </operations>
+  </Operation>
+
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>/Defs/ThingDef[defName="TechprofSubpersonaCore"]/description</xpath>
+      </li>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="TechprofSubpersonaCore"]/description</xpath>
+        <match Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="TechprofSubpersonaCore"]/description</xpath>
+            <value>
+              <description>A small AI core housing a low-grade subpersona specialized in teaching technology. When used, the AI will send Neural Mechanites into your blood stream. The Mechanites will quickly seek out the host brain. While Occupying the host brain, the mechanites will help increase the output of research.</description>
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="TechprofSubpersonaCore"]</xpath>
+          <value>
+            <description>A small AI core housing a low-grade subpersona specialized in teaching technology. When used, the AI will send Neural Mechanites into your blood stream. The Mechanites will quickly seek out the host brain. While Occupying the host brain, the mechanites will help increase the output of research.</description>
+          </value>
+        </nomatch>
+      </li>
+    </operations>
+  </Operation>
+</Patch>
